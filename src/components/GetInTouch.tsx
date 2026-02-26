@@ -14,7 +14,7 @@ function GetInTouch() {
             <div className="flex gap-5 justify-center my-6">
                 <div className="contact_info w-1/3">
                     <h3 className="text-2xl py-3">Contact Information</h3>
-                    <p className="text-gray-600 py-3">feel free to reach out through any of these channels. i typically repond withing 24 hours</p>
+                    <p className="text-gray-600 py-3">Feel free to reach out through any of these channels. i typically repond withing 24 hours</p>
                     <div>
                         <div className="card flex gap-3 items-center bg-white p-3 rounded my-3">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-200 text-blue-600">
@@ -40,7 +40,7 @@ function GetInTouch() {
                             </div>
                             <div className="info">
                                 <p>Location</p>
-                                <p>cairo</p>
+                                <p>Cairo</p>
                             </div>
                         </div>
                     </div>

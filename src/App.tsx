@@ -1,4 +1,5 @@
 import About from "./components/About"
+import GetInTouch from "./components/GetInTouch"
 import Landing from "./components/Landing"
 import Nav from "./components/Nav"
 import Projects from "./components/Projects"
@@ -11,6 +12,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <GetInTouch />
     </div>
 }
 

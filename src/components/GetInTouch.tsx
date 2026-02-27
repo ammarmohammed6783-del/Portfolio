@@ -5,9 +5,9 @@ import { CiLocationOn } from "react-icons/ci";
 
 function GetInTouch() {
     return (
-        <div className="bg-gray-50">
+        <div className="bg-gray-50 py-[50px]" id="getTouch">
             <div className="m-auto w-fit text-center">
-                <h1 className="text-6xl py-5">GetIn Touch</h1>
+                <h1 className="text-6xl py-5">Get In Touch</h1>
                 <p className="text-gray-700">have a project in mind or just wnat to chat? i'd love to ehar from you!</p>
             </div>
 

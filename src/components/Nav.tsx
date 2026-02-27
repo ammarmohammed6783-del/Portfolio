@@ -3,7 +3,7 @@
 
 function Nav() {
     return (
-        <div className="bg-white p-4 h-1/12 flex justify-between shadow">
+        <div className="bg-white p-4 h-1/12 flex justify-between items-center shadow">
             <p className="text-2xl text-blue-600">Portfolio</p>
             <div className="links">
                 <a href="" className="text-gray-700 p-4">About</a>

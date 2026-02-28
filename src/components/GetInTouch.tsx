@@ -1,21 +1,56 @@
+import React from "react";
+import emailjs from "@emailjs/browser";
 import { FiSend } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { CiLocationOn } from "react-icons/ci";
 
-function GetInTouch() {
+const GetInTouch: React.FC = () => {
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        // Extract form values
+        const target = e.currentTarget;
+        const name = (target.elements.namedItem("name") as HTMLInputElement).value;
+        const email = (target.elements.namedItem("email") as HTMLInputElement).value;
+        const message = (target.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+        // Send email using EmailJS
+        emailjs
+            .send(
+                "service_xj6g4qr",   // replace with your Service ID
+                "template_kfi2hau",  // replace with your Template ID
+                { name, email, message },
+                "owBTIpE3-VhCnl6LN"    // replace with your Public Key
+            )
+            .then(() => {
+                alert("Message sent!");
+                target.reset(); // Clear the form after sending
+            })
+            .catch((err) => {
+                console.error("EmailJS error:", err);
+                alert("Failed to send message, please try again.");
+            });
+    };
+
     return (
-        <div className="bg-gray-50 py-[50px]" id="getTouch">
+        <div className="bg-gray-50 py-12.5" id="getTouch">
             <div className="m-auto w-fit text-center">
                 <h1 className="text-6xl py-5">Get In Touch</h1>
-                <p className="text-gray-700">have a project in mind or just wnat to chat? i'd love to ehar from you!</p>
+                <p className="text-gray-700">
+                    Have a project in mind or just want to chat? I'd love to hear from you!
+                </p>
             </div>
 
-            <div className="flex gap-5 justify-center my-6">
-                <div className="contact_info w-1/3">
+            <div className="flex flex-wrap gap-5 justify-center my-6">
+                {/* Contact Information */}
+                <div className="contact_info w-1/3 min-w-75">
                     <h3 className="text-2xl py-3">Contact Information</h3>
-                    <p className="text-gray-600 py-3">Feel free to reach out through any of these channels. i typically repond withing 24 hours</p>
-                    <div>
+                    <p className="text-gray-600 py-3">
+                        Feel free to reach out through any of these channels. I typically respond within 24 hours.
+                    </p>
+
+                    <div className="flex flex-col">
                         <div className="card flex gap-3 items-center bg-white p-3 rounded my-3">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-200 text-blue-600">
                                 <MdOutlineEmail className="text-xl" />
@@ -25,6 +60,7 @@ function GetInTouch() {
                                 <p>ammar.mohammed.6783@gmail.com</p>
                             </div>
                         </div>
+
                         <div className="card flex gap-3 items-center bg-white p-3 rounded my-3">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-200 text-blue-600">
                                 <FiPhone className="text-xl" />
@@ -34,6 +70,7 @@ function GetInTouch() {
                                 <p>+22 01159192176</p>
                             </div>
                         </div>
+
                         <div className="card flex gap-3 items-center bg-white p-3 rounded my-3">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-200 text-blue-600">
                                 <CiLocationOn className="text-xl" />
@@ -46,24 +83,56 @@ function GetInTouch() {
                     </div>
                 </div>
 
-                <div className="form w-1/3 p-5 m-3 shadow rounded-2xl">
-                    <div className="entry flex flex-col py-2 ">
-                        <label className="py-2" htmlFor="name">Name</label>
-                        <input className="border p-2 border-gray-400 rounded" type="text" id="name" placeholder="Your Name" />
+                {/* Contact Form */}
+                <form
+                    onSubmit={sendEmail}
+                    className="form w-1/3 min-w-75 p-5 m-3 shadow rounded-2xl"
+                >
+                    <div className="flex flex-col py-2">
+                        <label htmlFor="name">Name</label>
+                        <input
+                            name="name"
+                            id="name"
+                            type="text"
+                            placeholder="Your Name"
+                            required
+                            className="border p-2 border-gray-400 rounded"
+                        />
                     </div>
-                    <div className="entry flex flex-col py-2 ">
-                        <label className="py-2" htmlFor="email">Email</label>
-                        <input className="border p-2 border-gray-400 rounded" type="email" id="email" placeholder="Your Email" />
+
+                    <div className="flex flex-col py-2">
+                        <label htmlFor="email">Email</label>
+                        <input
+                            name="email"
+                            id="email"
+                            type="email"
+                            placeholder="Your Email"
+                            required
+                            className="border p-2 border-gray-400 rounded"
+                        />
                     </div>
-                    <div className="entry flex flex-col py-2">
-                        <label className="py-2" htmlFor="message">Message</label>
-                        <input className="h-32 border p-2 border-gray-400 rounded" type="text" id="message" placeholder="Your Message Here..." />
+
+                    <div className="flex flex-col py-2">
+                        <label htmlFor="message">Message</label>
+                        <textarea
+                            name="message"
+                            id="message"
+                            placeholder="Your Message Here..."
+                            required
+                            className="h-32 border p-2 border-gray-400 rounded"
+                        />
                     </div>
-                    <button className="flex justify-center items-center gap-3 bg-blue-600 text-white rounded py-2 my-3 px-5 w-full"><FiSend /> Send Message</button>
-                </div>
+
+                    <button
+                        type="submit"
+                        className="flex justify-center items-center gap-3 bg-blue-600 text-white rounded py-2 my-3 px-5 w-full hover:bg-blue-700 transition"
+                    >
+                        <FiSend /> Send Message
+                    </button>
+                </form>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default GetInTouch
+export default GetInTouch;

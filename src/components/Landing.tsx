@@ -12,23 +12,33 @@ function Landing() {
                 <h2 className="text-4xl py-4">Front-end Dev - React.js</h2>
                 <p className="text-gray-700">I create beautiful, functional websites and applications that <br /> solve real-world problems. Passionate about clean code, <br /> intuitive design, and delivering exceptional user experiences.</p>
                 <div className="buttons flex my-6 gap-5">
-                    <a href="#getTouch"><button className="px-4 py-3 text-white bg-blue-600 rounded-xl">Get In Touch <FaArrowRight className="inline py-1 size-6" /></button></a>
-                    <a href="#projects"><button className="px-4 py-3 text-black bg-transparent border-2 border-blue-600 rounded-xl">View Work</button></a>
+                    <a href="#getTouch">
+                        <button className="flex items-center gap-2 px-4 py-3 text-white bg-blue-600 rounded-xl border-2 border-blue-600 hover:bg-transparent hover:text-black">
+                            Get In Touch
+                            <FaArrowRight className="size-5" />
+                        </button>
+                    </a>
+
+                    <a href="#projects">
+                        <button className="flex items-center px-4 py-3 text-black bg-transparent border-2 border-blue-600 rounded-xl hover:bg-blue-600 hover:text-white">
+                            View Work
+                        </button>
+                    </a>
                 </div>
                 <div className="icons flex my-3">
-                    <a href="https://github.com/ammarmohammed6783-del"><FaLinkedinIn className="size-10 p-2"/></a>
-                    <a href="mailto:ammar.mohammed.6783@gmail.com"><CiMail className="size-10 p-2"/></a>
-                    <a href="https://www.linkedin.com/in/ammar-mohamed-02795a3a8/"><FaGithub className="size-10 p-2"/></a>
+                    <a href="https://github.com/ammarmohammed6783-del"><FaLinkedinIn className="size-10 p-2" /></a>
+                    <a href="mailto:ammar.mohammed.6783@gmail.com"><CiMail className="size-10 p-2" /></a>
+                    <a href="https://www.linkedin.com/in/ammar-mohamed-02795a3a8/"><FaGithub className="size-10 p-2" /></a>
                 </div>
             </div>
-            <div className="relative w-[500px] h-[300px]">
+            <div className="relative w-125 h-75">
                 <img
                     src={myImage}
                     alt=""
                     className="relative z-10 rounded-2xl w-full h-full"
                 />
 
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-bl from-blue-500 to-purple-500 rounded-2xl rotate-3"></div>
+                <div className="absolute inset-0 w-full h-full bg-linear-to-bl from-blue-500 to-purple-500 rounded-2xl rotate-3"></div>
             </div>
         </div>
     )

@@ -2,7 +2,7 @@ import { FaCode } from "react-icons/fa";
 
 function About() {
     return (
-        <div className="flex flex-col justify-center items-center text-center my-15">
+        <div id="about" className="flex flex-col justify-center items-center text-center my-15">
             <div className="text ">
                 <h1 className="text-6xl">About Me</h1>
                 <p className="text-gray-600">I'm a passionate full-stack developer with 5+ years of experience building web</p>

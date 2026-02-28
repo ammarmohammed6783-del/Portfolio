@@ -3,13 +3,22 @@
 
 function Nav() {
     return (
-        <div className="bg-white p-4 h-1/12 flex justify-between items-center shadow">
+        <div className="bg-white h-16 flex justify-between items-center shadow px-4">
             <p className="text-2xl text-blue-600">Portfolio</p>
-            <div className="links">
-                <a href="" className="text-gray-700 p-4">About</a>
-                <a href="" className="text-gray-700 p-4">Projects</a>
-                <a href="" className="text-gray-700 p-4">Skills</a>
-                <a href="" className="text-gray-700 p-4">Contact</a>
+
+            <div className="flex h-full">
+                <a href="#about" className="flex items-center px-4 border-b-2 border-transparent hover:border-blue-600 transition">
+                    About
+                </a>
+                <a href="#projects" className="flex items-center px-4 border-b-2 border-transparent hover:border-blue-600 transition">
+                    Projects
+                </a>
+                <a href="#skills" className="flex items-center px-4 border-b-2 border-transparent hover:border-blue-600 transition">
+                    Skills
+                </a>
+                <a href="#getTouch" className="flex items-center px-4 border-b-2 border-transparent hover:border-blue-600 transition">
+                    Contact
+                </a>
             </div>
         </div>
     )

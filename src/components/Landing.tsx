@@ -31,7 +31,7 @@ function Landing() {
                     <a href="https://www.linkedin.com/in/ammar-mohamed-02795a3a8/"><FaGithub className="size-10 p-2" /></a>
                 </div>
             </div>
-            <div className="relative w-125 h-75">
+            <div className="hidden relative w-125 h-75 lg:block">
                 <img
                     src={myImage}
                     alt=""

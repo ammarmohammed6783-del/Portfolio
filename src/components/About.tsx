@@ -3,7 +3,7 @@ import { FaCode } from "react-icons/fa";
 function About() {
     return (
         <div id="about" className="flex flex-col justify-center items-center text-center my-15">
-            <div className="text ">
+            <div className="text max-w-2/3">
                 <h1 className="text-6xl">About Me</h1>
                 <p className="text-gray-600">I'm a passionate full-stack developer with 5+ years of experience building web</p>
                 <p className="text-gray-600">applications. I specialize in React, TypeScript, and Node.js, and I love turning</p>

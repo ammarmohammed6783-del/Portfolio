@@ -1,1 +1,12 @@
 media query
+
+
+<div class="text-red-500 md:text-blue-500">
+
+Meaning:
+
+under 768px → red
+
+768px+ → blue
+
+So default = under breakpoint

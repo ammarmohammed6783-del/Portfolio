@@ -6,23 +6,44 @@ interface probs {
     skills: string[],
 }
 
-function Proj({skills} : probs) {
+function Proj({ skills }: probs) {
     return (
-        <div className="w-3/11 shadow rounded-2xl">
-            <img src={exchange} alt="exchange" />
-            <div className="m-4">
-                <h3>exchange web</h3>
-                <p>my idea is to exchange anything you want with anything you can do or have</p>
-                <div className="flex gap-1 my-5 flex-wrap justify-center">
-                    {
-                        skills.map((skill, index) => (
-                            <div key={index} className="tag px-4 py-1 bg-blue-50 rounded-2xl w-fit text-blue-500">{skill}</div>
-                        ))
-                    }
+        <div className="w-full bg-white shadow rounded-2xl overflow-hidden hover:shadow-lg transition">
+
+            {/* Image */}
+            <img
+                src={exchange}
+                alt="exchange project"
+                className="w-full h-48 object-cover"
+            />
+
+            {/* Content */}
+            <div className="p-5">
+                <h3 className="text-xl font-semibold mb-2">Exchange Web</h3>
+                <p className="text-gray-600 mb-4">
+                    My idea is to exchange anything you want with anything you can do or have.
+                </p>
+
+                {/* Tags */}
+                <div className="flex gap-2 mb-5 flex-wrap">
+                    {skills.map((skill, index) => (
+                        <span
+                            key={index}
+                            className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm"
+                        >
+                            {skill}
+                        </span>
+                    ))}
                 </div>
-                <div className="flex gap-4">
-                    <p className="flex items-center gap-2"><FaGithub /> Code</p>
-                    <p className="flex items-center gap-2"><FiExternalLink/> Live Demo</p>
+
+                {/* Links */}
+                <div className="flex gap-6 text-gray-700">
+                    <a className="flex items-center gap-2 hover:text-black cursor-pointer">
+                        <FaGithub /> Code
+                    </a>
+                    <a className="flex items-center gap-2 hover:text-black cursor-pointer">
+                        <FiExternalLink /> Live Demo
+                    </a>
                 </div>
             </div>
         </div>

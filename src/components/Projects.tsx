@@ -3,14 +3,17 @@ import Proj from "./component/Proj"
 function Projects() {
     return (
         <div className="m-10" id="projects">
-            <div className="w-2/3 m-auto text-center">
-                <h1 className="text-5xl m-4">Featured Projects</h1>
-                <p className="text-gray-600 m-4">here are some of my recent projects that showcase my skills and experience</p>
+            <div className="max-w-3xl m-auto text-center">
+                <h1 className="text-3xl md:text-5xl m-4">Featured Projects</h1>
+                <p className="text-gray-600 m-4">
+                    Here are some of my recent projects that showcase my skills and experience
+                </p>
             </div>
-            <div className="flex justify-center gap-5">
-                <Proj skills={["Tailwind", "React", "mongodb"]}/>
-                <Proj skills={["bootstrab", "angular", "mongodb"]}/>
-                <Proj skills={["stylee", "vue.js", "mongodb"]}/>
+
+            <div className="grid gap-6 w-11/12 m-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <Proj skills={["Tailwind", "React", "MongoDB"]} />
+                <Proj skills={["Bootstrap", "Angular", "MongoDB"]} />
+                <Proj skills={["CSS", "Vue.js", "MongoDB"]} />
             </div>
         </div>
     )

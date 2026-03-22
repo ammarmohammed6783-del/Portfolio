@@ -2,11 +2,17 @@ import exchange from "../../img/exchange.webp"
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 
-interface probs {
+interface ProjectType {
+    name: string,
     skills: string[],
+    about: string,
 }
 
-function Proj({ skills }: probs) {
+interface Props {
+    element: ProjectType
+}
+
+function Proj({ element }: Props) {
     return (
         <div className="w-full bg-white shadow rounded-2xl overflow-hidden hover:shadow-lg transition">
 
@@ -26,7 +32,7 @@ function Proj({ skills }: probs) {
 
                 {/* Tags */}
                 <div className="flex gap-2 mb-5 flex-wrap">
-                    {skills.map((skill, index) => (
+                    {element.skills.map((skill, index) => (
                         <span
                             key={index}
                             className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm"

@@ -30,9 +30,11 @@ function Projects() {
             </div>
 
             <div className="grid gap-6 w-11/12 m-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                <Proj skills={["Tailwind", "React", "MongoDB"]} />
-                <Proj skills={["Tailwind", "React.js", "MongoDB", "Express"]} />
-                <Proj skills={["CSS", "Vue.js", "MongoDB"]} />
+                {
+                    proj_data.map((ele, index ) => (
+                        <Proj key={index} element={ele} />
+                    ))
+                }
             </div>
         </div>
     )

@@ -6,6 +6,7 @@ interface ProjectType {
     name: string,
     skills: string[],
     about: string,
+    imgSrc?: string,
 }
 
 interface Props {
@@ -18,16 +19,16 @@ function Proj({ element }: Props) {
 
             {/* Image */}
             <img
-                src={exchange}
-                alt="exchange project"
+                src={element.imgSrc || exchange}
+                alt={`${element.name} project`}
                 className="w-full h-48 object-cover"
             />
 
             {/* Content */}
             <div className="p-5">
-                <h3 className="text-xl font-semibold mb-2">Exchange Web</h3>
+                <h3 className="text-xl font-semibold mb-2">{element.name}</h3>
                 <p className="text-gray-600 mb-4">
-                    My idea is to exchange anything you want with anything you can do or have.
+                    {element.about}
                 </p>
 
                 {/* Tags */}

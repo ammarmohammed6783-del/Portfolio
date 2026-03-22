@@ -1,4 +1,6 @@
 import Proj from "./component/Proj"
+import swapifyImg from "../img/swapify.png"
+import exchangeImg from "../img/exchange.webp"
 
 function Projects() {
 
@@ -7,16 +9,19 @@ function Projects() {
             name: "Swapify",
             skills: ["Tailwind", "React.js", "MongoDB", "Express"],
             about: "A space where value isn’t measured by money. Swap what you have for what you need and support each other through fair, simple exchanges.",
+            imgSrc: swapifyImg
         },
         {
-            name: "ex",
+            name: "Exchange Web",
             skills: ["Tailwind", "React", "MongoDB"],
-            about: "My idea is to exchange anything you want with anything you can do or have."
+            about: "My idea is to exchange anything you want with anything you can do or have.",
+            imgSrc: exchangeImg
         },
         {
-            name: "ex",
+            name: "More Projects",
             skills: ["Tailwind", "React", "MongoDB"],
-            about: "My idea is to exchange anything you want with anything you can do or have."
+            about: "More exciting projects coming soon.",
+            imgSrc: exchangeImg
         }
     ]
 

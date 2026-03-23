@@ -9,19 +9,22 @@ function Projects() {
             name: "Swapify",
             skills: ["Tailwind", "React.js", "MongoDB", "Express"],
             about: "A space where value isn’t measured by money. Swap what you have for what you need and support each other through fair, simple exchanges.",
-            imgSrc: swapifyImg
+            imgSrc: swapifyImg,
+            githubLink: "https://github.com/ammarmohammed6783-del/Swapify",
         },
         {
             name: "Exchange Web",
             skills: ["Tailwind", "React", "MongoDB"],
             about: "My idea is to exchange anything you want with anything you can do or have.",
-            imgSrc: exchangeImg
+            imgSrc: exchangeImg,
+            githubLink: "https://github.com/ammarmohammed6783-del/Swapify",
         },
         {
             name: "More Projects",
             skills: ["Tailwind", "React", "MongoDB"],
             about: "More exciting projects coming soon.",
-            imgSrc: exchangeImg
+            imgSrc: exchangeImg,
+            githubLink: "https://github.com/ammarmohammed6783-del/Swapify",
         }
     ]
 
@@ -36,7 +39,7 @@ function Projects() {
 
             <div className="grid gap-6 w-11/12 m-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {
-                    proj_data.map((ele, index ) => (
+                    proj_data.map((ele, index) => (
                         <Proj key={index} element={ele} />
                     ))
                 }

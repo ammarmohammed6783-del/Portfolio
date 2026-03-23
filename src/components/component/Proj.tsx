@@ -7,6 +7,7 @@ interface ProjectType {
     skills: string[],
     about: string,
     imgSrc?: string,
+    githubLink?: string
 }
 
 interface Props {
@@ -49,7 +50,7 @@ function Proj({ element }: Props) {
 
                 {/* Links */}
                 <div className="flex items-center gap-5 mt-auto pt-4 border-t border-gray-100 text-sm font-semibold">
-                    <a className="flex items-center gap-1.5 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+                    <a className="flex items-center gap-1.5 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" href={element.githubLink}>
                         <FaGithub className="text-base" />
                         Code
                     </a>

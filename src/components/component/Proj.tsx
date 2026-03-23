@@ -28,7 +28,7 @@ function Proj({ element }: Props) {
             </div>
 
             {/* Content */}
-            <div className="p-6 flex flex-col flex-grow">
+            <div className="p-6 flex flex-col grow">
                 <div className="mb-4">
                     <h3 className="text-xl font-bold text-gray-900 mb-2 tracking-tight">{element.name}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
